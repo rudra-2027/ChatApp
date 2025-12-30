@@ -6,7 +6,7 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import { useAuth } from './context/AuthProvider'
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
-import Loading from './components/loading'
+// import Loading from './components/loading'
 import toast, { Toaster } from 'react-hot-toast'
 
 
