@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Chatuser from "./Chatuser.jsx";
+import Chatuser from "./Chatuser";
 import Messages from "./Messages.jsx";
 import Type from "./Type.jsx";
 import useConversation from "../../statemanage/useConversation.js";
