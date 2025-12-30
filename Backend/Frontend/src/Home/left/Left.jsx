@@ -1,7 +1,7 @@
 import React from 'react'
-import Search from './Search'
+import Search from './Search.jsx'
 import User from './User'
-import Users from './Users'
+import Users from './Users.jsx'
 
 export default function Left() {
   return (

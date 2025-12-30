@@ -1,7 +1,7 @@
 import React from "react"
 import { useForm } from "react-hook-form"
 import axios from "axios"
-import { useAuth } from "../context/AuthProvider";
+import { useAuth } from "../context/AuthProvider.js";
 import { Link } from "react-router-dom";
 
 function Signup() {
