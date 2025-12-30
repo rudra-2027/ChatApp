@@ -10,7 +10,7 @@ const users = {};
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chatapp-8-hobb.onrender.com",
     methods: ["GET", "POST"],
   },
 });
