@@ -1,0 +1,4 @@
+-****Message Model****-
+
+SenderId;
+RecieverId;
