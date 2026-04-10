@@ -5,7 +5,7 @@ import { getReceiverSocketId } from "../SocketIO/server.js";
 import { io } from "../SocketIO/server.js";
 
 
-// Socket
+
 export const sendMessage = async (req, res) => {
   try {
     const { message } = req.body;
@@ -32,7 +32,6 @@ export const sendMessage = async (req, res) => {
     conversation.messages.push(newMessage._id);
     await conversation.save();
 
-    // 🔥 realtime emit
     const receiverSocketId = getReceiverSocketId(receiverId);
     if (receiverSocketId) {
       io.to(receiverSocketId).emit("newMessage", newMessage);

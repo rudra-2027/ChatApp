@@ -17,7 +17,7 @@ function useSendMessage() {
         { message: messageContent }
       );
 
-      // ✅ Optimistic UI (append immediately)
+      
       addMessage(res.data.newMessage);
 
     } catch (error) {

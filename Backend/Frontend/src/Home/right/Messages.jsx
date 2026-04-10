@@ -5,7 +5,7 @@ import Loading from "../../components/Loading.jsx";
 import useGetSocketMessage from "../../context/useGetSocketMessage.jsx";
 
 function Messages() {
-  const { loading, messages } = useGetMessage(); // messages MUST be an array
+  const { loading, messages } = useGetMessage();  
   useGetSocketMessage();
 
   const lastMessageRef = useRef(null);

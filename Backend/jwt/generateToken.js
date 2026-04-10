@@ -5,9 +5,9 @@ const createTokenAndSaveCookie = (userId, res) => {
     expiresIn: "5d"
   });
   res.cookie("jwt", token, {
-    httpOnly: true,//xss
+    httpOnly: true,
     secure: true,
-    sameSite: "strict",//csrf
+    sameSite: "strict",
   })
 }
 

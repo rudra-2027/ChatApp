@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/* ---------------- MIDDLEWARE ---------------- */
+
 
 app.use(
   cors({
@@ -28,8 +28,6 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-/* ---------------- ROUTES ---------------- */
-
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "OK" });
 });
@@ -37,7 +35,6 @@ app.get("/api/health", (req, res) => {
 app.use("/api/user", router);
 app.use("/api/message", messageRoute);
 
-/* ---------------- FRONTEND BUILD ---------------- */
 
 if (process.env.NODE_ENV === "production") {
   const dirPath = path.resolve()
@@ -51,16 +48,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-/* ---------------- START SERVER ---------------- */
 
 const startServer = async () => {
   try {
     await connectDB();
     server.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
+      console.log(` Server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error("❌ Failed to start server:", error);
+    console.error(" Failed to start server:", error);
     process.exit(1);
   }
 };

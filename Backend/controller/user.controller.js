@@ -73,13 +73,13 @@ export const logout = async (req, res) => {
 
 export const getUserProfile = async (req, res) => {
   try {
-    const loggedInUserId = req.user._id; // ✅ correct
+    const loggedInUserId = req.user._id; 
 
     const filteredUser = await User.find({
       _id: { $ne: loggedInUserId }
     }).select("-password");
 
-    res.status(200).json(filteredUser); // ✅ 200 instead of 201
+    res.status(200).json(filteredUser); 
   } catch (error) {
     console.error("Error in getUserProfile:", error);
     res.status(500).json({ message: "Server error" });

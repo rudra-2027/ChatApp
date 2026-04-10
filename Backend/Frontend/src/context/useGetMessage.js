@@ -17,7 +17,7 @@ const useGetMessage = () => {
           `/api/message/get/${selectedConversation._id}`
         );
 
-        // ✅ ONLY store the array
+      
         setMessages(res.data.messages || []);
 
       } catch (error) {

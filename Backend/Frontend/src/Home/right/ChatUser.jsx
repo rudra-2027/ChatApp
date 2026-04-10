@@ -6,7 +6,6 @@ function ChatUser() {
   const { selectedConversation } = useConversation();
   const { onlineUsers } = useSocketContext();
 
-  // 🔒 guard: no conversation selected
   if (!selectedConversation) {
     return null;
   }

@@ -5,7 +5,6 @@ import express from "express";
 const app = express();
 const server = http.createServer(app);
 
-// store online users
 const users = {};
 
 const io = new Server(server, {
@@ -15,7 +14,7 @@ const io = new Server(server, {
   },
 });
 
-// helper function
+
 export const getReceiverSocketId = (receiverId) => {
   return users[receiverId];
 };
@@ -29,7 +28,7 @@ io.on("connection", (socket) => {
     users[userId] = socket.id;
   }
 
-  // send updated online users list
+  
   io.emit("getOnline", Object.keys(users));
 
   socket.on("disconnect", () => {

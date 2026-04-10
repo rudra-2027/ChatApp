@@ -48,7 +48,7 @@ function Login() {
           <span className="text-blue-600 font-semibold">Account</span>
         </h2>
 
-        {/* Email */}
+       
         <label className="input validator h-10 gap-2 w-full flex items-center">
           <svg className="h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">

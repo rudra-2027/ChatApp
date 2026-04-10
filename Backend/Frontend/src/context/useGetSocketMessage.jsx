@@ -7,7 +7,7 @@ const useGetSocketMessage = () => {
   const { socket } = useSocketContext();
   const { addMessage } = useConversation();
 
-  // 🔥 preload audio ONCE
+  
   const notificationSound = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const useGetSocketMessage = () => {
     if (!socket) return;
 
     const handleNewMessage = (newMessage) => {
-      // reset audio so it plays instantly
+    
       if (notificationSound.current) {
         notificationSound.current.currentTime = 0;
         notificationSound.current.play();
